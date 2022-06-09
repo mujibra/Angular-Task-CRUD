@@ -1,0 +1,38 @@
+<div
+  class="relative flex flex-col items-center p-8 w-full bg-[#94B49F] h-full gap-y-5"
+>
+  <div class="fixed">
+    <div class="relative h-screen w-full flex flex-col gap-y-4">
+      <div
+        routerLink="/users"
+        class="p-2 text-[30px] rounded-2xl font-bold text-center cursor-pointer"
+      >
+        Admin
+      </div>
+      <div
+        routerLink="/users"
+        class="p-2 w-full bg-[#FCF8E8] rounded-xl shadow-lg text-center hover:bg-lime-800 hover:text-white cursor-pointer"
+      >
+        User List
+      </div>
+      <div
+        routerLink="/users/history"
+        class="p-2 w-[200px] bg-[#FCF8E8] rounded-xl shadow-lg text-center hover:bg-lime-800 hover:text-white cursor-pointer"
+      >
+        History
+      </div>
+      <div
+        routerLink="/users/add"
+        class="p-2 w-[200px] bg-[#FCF8E8] rounded-xl shadow-lg text-center hover:bg-lime-800 hover:text-white cursor-pointer"
+      >
+        Create New User
+      </div>
+      <div
+        (click)="logout()"
+        class="absolute bottom-14 p-2 w-[200px] bg-[#FCF8E8] rounded-xl shadow-lg text-center hover:bg-lime-800 hover:text-white cursor-pointer"
+      >
+        Logout
+      </div>
+    </div>
+  </div>
+</div>

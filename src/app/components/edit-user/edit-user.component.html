@@ -1,0 +1,126 @@
+<div
+  class="bg-[#FCF8E8] h-screen max-w-2xl py-12 mx-auto sm:px-6 lg:max-w-7xl lg:px-8 flex justify-center"
+>
+  <div>
+    <div class="mb-8">
+      <div class="px-4 sm:px-0">
+        <h3 class="text-lg font-medium leading-6 text-gray-900">Edit User</h3>
+        <p class="mt-1 text-sm text-gray-600">
+          Fill in the form below to edit user.
+        </p>
+      </div>
+    </div>
+    <div>
+      <form (submit)="editUser()">
+        <div class="shadow overflow-hidden rounded-lg">
+          <div class="px-4 py-5 bg-white">
+            <div class="w-[600px] grid grid-cols-6 gap-6">
+              <!-- Name -->
+              <div class="col-span-6">
+                <label
+                  for="first-name"
+                  class="block text-sm font-medium text-gray-700"
+                  >Username</label
+                >
+                <input
+                  required="true"
+                  [(ngModel)]="user.username"
+                  value="{{ user.username }}"
+                  type="text"
+                  name="username"
+                  id="username"
+                  class="px-1 mt-1 focus:ring focus:outline-none block w-full border border-gray-300 h-8 rounded-md"
+                />
+              </div>
+
+              <div class="col-span-6">
+                <label
+                  for="email-address"
+                  class="block text-sm font-medium text-gray-700"
+                  >Email address</label
+                >
+                <input
+                  required="true"
+                  [(ngModel)]="user.email"
+                  value="{{ user.email }}"
+                  type="text"
+                  name="email-address"
+                  id="email-address"
+                  autocomplete="email"
+                  class="px-1 mt-1 focus:ring focus:outline-none block w-full border border-gray-300 h-8 rounded-md"
+                />
+              </div>
+
+              <div class="col-span-6">
+                <label
+                  for="phoneNumber"
+                  class="block text-sm font-medium text-gray-700"
+                  >Phone Number</label
+                >
+                <input
+                  required="true"
+                  [(ngModel)]="user.phoneNumber"
+                  value="{{ user.phoneNumber }}"
+                  type="text"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  autocomplete="phoneNumber"
+                  class="px-1 mt-1 focus:ring focus:outline-none block w-full border border-gray-300 h-8 rounded-md"
+                />
+              </div>
+
+              <div class="col-span-6">
+                <label
+                  for="address"
+                  class="block text-sm font-medium text-gray-700"
+                  >Address</label
+                >
+                <input
+                  required="true"
+                  [(ngModel)]="user.address"
+                  value="{{ user.address }}"
+                  type="text"
+                  name="address"
+                  autocomplete="address"
+                  class="px-1 mt-1 focus:ring focus:outline-none block w-full border border-gray-300 h-8 rounded-md"
+                />
+              </div>
+
+              <div class="col-span-6">
+                <label
+                  for="image"
+                  class="block text-sm font-medium text-gray-700"
+                  >Image</label
+                >
+                <input
+                  required="true"
+                  [(ngModel)]="user.image"
+                  value="{{ user.image }}"
+                  type="text"
+                  name="image"
+                  class="px-1 mt-1 focus:ring focus:outline-none block w-full border border-gray-300 h-8 rounded-md"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="px-4 flex gap-x-4 justify-center py-3 bg-gray-50 text-right sm:px-6"
+          >
+            <button
+              type="submit"
+              class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Save
+            </button>
+            <button
+              type="submit"
+              class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-rose-600 hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

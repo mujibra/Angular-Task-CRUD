@@ -1,0 +1,26 @@
+<div
+  class="bg-[#FCF8E8] h-screen flex flex-col items-center w-full py-12 mx-auto sm:px-6 lg:max-w-7xl lg:px-8"
+  *ngIf="!loading && isNotEmpty()"
+>
+  <div class="mb-8 text-[30px] rounded-2xl font-bold">User Detail</div>
+  <div *ngIf="loading">
+    <app-spinner></app-spinner>
+  </div>
+  <div class="flex flex-row max-w-4xl rounded-lg bg-[#F2EBE9] shadow-lg">
+    <img
+      class="w-96 h-96 object-cover rounded-l-lg bg-white"
+      src="{{ user.image }}"
+      alt=""
+    />
+    <div class="p-8 w-[325px] flex flex-col justify-start">
+      <p class="text-gray-900 text-xl font-medium mb-8">
+        Username : {{ user.username }}
+      </p>
+      <p class="text-gray-700 text-base mb-2">Email : {{ user.email }}</p>
+      <p class="text-gray-700 text-base mb-2">
+        Phone Number : {{ user.phoneNumber }}
+      </p>
+      <p class="text-gray-700 text-base mb-2">Address : {{ user.address }}</p>
+    </div>
+  </div>
+</div>
